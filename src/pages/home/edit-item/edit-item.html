@@ -1,0 +1,14 @@
+<ion-content overflow-scroll="false">
+  <ion-item>
+    <ion-label floating>Ingredient</ion-label>
+    <ion-input type="text" [(ngModel)]="record.ingredient" name="ingredient"></ion-input>
+  </ion-item>
+    <ion-item>
+    <ion-label floating>Quantité</ion-label>
+    <ion-input type="numeric" [(ngModel)]="record.quantity" name="quantity"></ion-input>
+  </ion-item>
+  <div class="action-btn-group">
+    <button ion-button round (click)="save()" class="action-btn">Sauvegarder</button>
+    <button ion-button round (click)="cancel()" color="secondary" class="action-btn">Annuler</button>
+  </div>
+</ion-content>

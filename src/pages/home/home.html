@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Liste des courses</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="reset()" class="toolbar-button"><ion-icon name="return-left"></ion-icon></button>
+      <button ion-button icon-only (click)="add()" class="toolbar-button"><ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="shopping-list" >
+    <ion-item *ngFor="let item of items | async">
+      <ion-checkbox item-left color="green" [(ngModel)]="item.validate" (click)="validate(item.$key, !item.validate)"></ion-checkbox>
+      <ion-label class="quantity">{{item.quantity}}</ion-label>
+      <ion-label class="ingredient">{{item.ingredient}}</ion-label>
+      <button ion-button icon-only item-right (click)="edit(item.$key, item)" color="secondary" class="action-btn"><ion-icon name="md-create"></ion-icon></button>
+      <button ion-button icon-only item-right (click)="remove(item.$key)" color="danger" class="action-btn"><ion-icon name="md-remove"></ion-icon></button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
