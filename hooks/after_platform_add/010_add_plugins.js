@@ -11,7 +11,8 @@ var pluginlist = [
   'cordova-plugin-whitelist',
   'cordova-plugin-splashscreen',
   'cordova-plugin-statusbar',
-  'ionic-plugin-keyboard'
+  'ionic-plugin-keyboard',
+  'cordova-plugin-code-push'
 ]
 
 // no need to configure below

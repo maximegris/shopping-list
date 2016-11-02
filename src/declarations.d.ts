@@ -12,3 +12,13 @@
   https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html
 */
 declare module '*';
+
+interface Window {
+  codePush: any
+}
+declare var window : Window
+
+interface InstallMode {
+  IMMEDIATE:string
+}
+declare var InstallMode : InstallMode

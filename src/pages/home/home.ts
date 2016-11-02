@@ -14,7 +14,11 @@ export class HomePage {
 
   constructor(public af: AngularFire, public toastCtrl: ToastController, public modalCtrl: ModalController,
     private navCtrl: NavController, public alertCtrl: AlertController) {
-    this.items = af.database.list('/items')
+    this.items = af.database.list('/items', {
+      query: {
+        orderByChild: 'validate'
+      }
+    })
     this.record = new ItemModel()
   }
 
@@ -55,7 +59,7 @@ export class HomePage {
 
     modal.onDidDismiss(data => {
       if(data) {
-        this.items.update(key, data)
+        this.items.update(key, {ingredient: data.ingredient, quantity: data.quantity})
           .then(_ => this.displayToast('Ingrédient mis à jour'))
           .catch(this.errorCatched)
       }

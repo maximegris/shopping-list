@@ -6,9 +6,13 @@ Save and restore your phone datas
 
 * Launch application in browser => `ionic serve`
 
-* Run application => `ionic run`
+* Run application => `ionic run  android`
 
-* Build application => ``ionic build`
+* Build application => ``ionic build android`
+
+## CodePush deployement
+
+* code-push release-cordova <appName> <platform>
 
 ## Firebase workaround
 import * as firebase from 'firebase'; dans angularfire2.d.ts
