@@ -38,7 +38,7 @@ export class HomePage {
 
   reset  = () => {
 	  var confirm = this.alertCtrl.create({
-			title : 'Confirm',
+			title : 'Confirmation...',
 			message : 'Souhaitez-vous supprimer la liste ?',
 			buttons: [
 				{text: 'Non', role:'cancel', handler : () => {}},

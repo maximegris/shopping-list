@@ -29,7 +29,7 @@
     <access origin="https://codepush.blob.core.windows.net"/>
     <access origin="https://codepushupdates.azureedge.net"/>
     <access origin="https://shopping-list-fe281.firebaseio.com"/>
-    <preference name="CodePushDeploymentKey" value="<API-KEY>"/>
+    <preference name="CodePushDeploymentKey" value="<KEY>"/>
     <preference name="SplashMaintainAspectRatio" value="true"/>
     <icon src="resources\android\icon\drawable-ldpi-icon.png" density="ldpi"/>
     <icon src="resources\android\icon\drawable-mdpi-icon.png" density="mdpi"/>
