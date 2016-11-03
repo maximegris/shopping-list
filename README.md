@@ -6,16 +6,14 @@ Save and restore your phone datas
 
 * Launch application in browser => `ionic serve`
 
-* Run application => `ionic run  android`
+* Run application => `ionic run android`
 
 * Build application => ``ionic build android`
 
 ## CodePush deployement
 
-* code-push release-cordova <appName> <platform>
+* code-push release-cordova `appName` `platform`
 
 ## Firebase workaround
-import * as firebase from 'firebase'; dans angularfire2.d.ts
 
-http://stackoverflow.com/questions/39978598/error-file-to-import-not-found-or-unreadable-globals-core
-https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#modifying-your-existing-project
+import * as firebase from 'firebase'; in node_modules/angularfire2/angularfire2.d.ts
