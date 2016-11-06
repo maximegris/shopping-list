@@ -5,11 +5,11 @@ import { HomePage, EditItemPage } from '../pages/_index'
 import { AngularFireModule } from 'angularfire2'
 
 export const firebaseConfig = {
-    apiKey: '<KEY>',
+    apiKey: '',
     authDomain: 'shopping-list-fe281.firebaseapp.com',
     databaseURL: 'https://shopping-list-fe281.firebaseio.com',
     storageBucket: 'shopping-list-fe281.appspot.com',
-    messagingSenderId: '<KEY>'
+    messagingSenderId: ''
 }
 
 @NgModule({

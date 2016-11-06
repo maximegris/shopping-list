@@ -10,12 +10,16 @@
 
 <ion-content>
   <ion-list class="shopping-list" >
-    <ion-item *ngFor="let item of items | async">
-      <ion-checkbox item-left color="green" [(ngModel)]="item.validate" (click)="validate(item.$key, !item.validate)"></ion-checkbox>
+    <div class="action-bar">
+    <button ion-button icon-only item-right (click)="toogleShoppingMode()" class="action-bar-btn"><ion-icon name="md-create"></ion-icon>{{shoppingModeBtn}}</button>
+    <button ion-button icon-only item-right (click)="toogleSupprMode()" color="danger" class="action-bar-btn"><ion-icon name="md-remove"></ion-icon>{{supprModeBtn}}</button>
+    </div>
+    <ion-item *ngFor="let item of items | async" [ngClass]="{'validate': item.validate}">
       <ion-label class="quantity">{{item.quantity}}</ion-label>
       <ion-label class="ingredient">{{item.ingredient}}</ion-label>
-      <button ion-button icon-only item-right (click)="edit(item.$key, item)" color="secondary" class="action-btn"><ion-icon name="md-create"></ion-icon></button>
-      <button ion-button icon-only item-right (click)="remove(item.$key)" color="danger" class="action-btn"><ion-icon name="md-remove"></ion-icon></button>
+      <button *ngIf="!shoppingMode && !supprMode" ion-button icon-only item-right (click)="edit(item.$key, item)" color="secondary" class="action-btn"><ion-icon name="md-create"></ion-icon></button>
+      <button *ngIf="shoppingMode" ion-button icon-only item-right (click)="validate(item.$key, !item.validate)" class="action-btn"><ion-icon name="md-checkmark"></ion-icon></button>
+      <button *ngIf="supprMode" ion-button icon-only item-right (click)="remove(item.$key)" color="danger" class="action-btn"><ion-icon name="md-remove"></ion-icon></button>
     </ion-item>
   </ion-list>
 

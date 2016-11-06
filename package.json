@@ -3,7 +3,7 @@
   "description": "Shared shopping list",
   "author": "Picotin",
   "license": "",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
     "zone.js": "0.6.21"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "0.0.38",
+    "@ionic/app-scripts": "0.0.39",
     "@types/cordova": "0.0.34",
     "@types/cordova-plugin-contacts": "0.0.3",
     "typescript": "2.0.6"
