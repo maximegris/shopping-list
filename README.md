@@ -1,6 +1,6 @@
 # Phone Backups
 
-Save and restore your phone datas
+Shared shopping list 
 
 ## Command lines
 
