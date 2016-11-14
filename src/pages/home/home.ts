@@ -1,7 +1,6 @@
 import { Component } from '@angular/core'
 import { ToastController, ModalController, NavController, AlertController } from 'ionic-angular'
 import { AngularFire, FirebaseListObservable } from 'angularfire2'
-import { Subject } from 'rxjs'
 import { ItemModel } from '../../models/_index'
 import { EditItemPage } from '../_index'
 @Component({
