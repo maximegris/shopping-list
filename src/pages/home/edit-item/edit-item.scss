@@ -1,9 +1,15 @@
 edit-item {
+
+  .item-input {
+    padding: 0 16px;
+  }
+
   .action-btn-group {
     text-align:center;
     margin-top: 10px;
     .action-btn {
-      width: 130px;
+      height: 4.6rem;
+      width: 45%;
     }
   }
 }
