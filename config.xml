@@ -25,10 +25,10 @@
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
   <platform name="android">
-    <access origin="https://codepush.azurewebsites.net"/>
-    <access origin="https://codepush.blob.core.windows.net"/>
-    <access origin="https://codepushupdates.azureedge.net"/>
-    <access origin="https://shopping-list-fe281.firebaseio.com"/>
+    <access origin="https://codepush.azurewebsites.net/*"/>
+    <access origin="https://codepush.blob.core.windows.net/*"/>
+    <access origin="https://codepushupdates.azureedge.net/*"/>
+    <access origin="*://*.firebaseio.com/*"/>
     <preference name="CodePushDeploymentKey" value="<KEY>"/>
     <preference name="SplashMaintainAspectRatio" value="true"/>
     <icon src="resources\android\icon\drawable-ldpi-icon.png" density="ldpi"/>
