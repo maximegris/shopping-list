@@ -9,27 +9,43 @@ import { EditItemPage } from '../_index'
 })
 export class HomePage {
 
+  _af:AngularFire
   items:FirebaseListObservable<ItemModel[]>
+  itemsSubscription:any
   record: ItemModel
   shoppingMode:boolean
   shoppingModeBtn:String
   supprMode:boolean
   supprModeBtn:String
   supprItems:ItemModel[]
+  loading:boolean
 
   constructor(public af: AngularFire, public toastCtrl: ToastController, public modalCtrl: ModalController, private navCtrl: NavController, public alertCtrl: AlertController) {
-    this.items = af.database.list('/items', {
-      query: {
-        orderByChild: 'validate',
-      }
-    })
+    this._af = af
     this.record = new ItemModel()
     this.shoppingMode = false
     this.shoppingModeBtn = 'Démarrer'
     this.supprMode = false
     this.supprModeBtn = 'Supprimer'
     this.supprItems = []
+    this.loading = true
+
   }
+
+    ngOnInit() {
+      this.items = this._af.database.list('/items', {
+        query: {
+          orderByChild: 'validate',
+        }
+      })
+      this.itemsSubscription = this.items.subscribe(resp => {
+        this.loading = false
+      })
+    }
+
+    ngOnDestroy(){
+      this.itemsSubscription.unsubscribe()
+    }
 
   add  = () => {
     let modal = this.modalCtrl.create(EditItemPage, { item: new ItemModel()})

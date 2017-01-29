@@ -1,4 +1,13 @@
 page-home {
+
+  ion-header {
+    ion-spinner {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
   .shopping-list {
     .quantity {
 
@@ -18,6 +27,8 @@ page-home {
       display: flex;
 
       .action-bar-btn {
+        height: 4.6rem;
+        width: 50%;
         flex-grow: 1;
       }
     }

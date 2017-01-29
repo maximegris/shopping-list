@@ -1,6 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Liste des courses</ion-title>
+    <ion-spinner *ngIf="loading"></ion-spinner>
     <ion-buttons end>
       <button ion-button icon-only (click)="reset()" class="toolbar-button"><ion-icon name="return-left"></ion-icon></button>
       <button ion-button icon-only (click)="add()" class="toolbar-button"><ion-icon name="add"></ion-icon></button>
@@ -9,7 +10,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-list class="shopping-list" >
+  
+  <ion-list class="shopping-list" *ngIf="!loading">
     <div class="action-bar">
     <button ion-button icon-only item-right (click)="toogleShoppingMode()" class="action-bar-btn"><ion-icon name="md-create"></ion-icon>{{shoppingModeBtn}}</button>
     <button ion-button icon-only item-right (click)="toogleSupprMode()" color="danger" class="action-bar-btn"><ion-icon name="md-remove"></ion-icon>{{supprModeBtn}}</button>
