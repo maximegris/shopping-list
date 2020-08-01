@@ -6,7 +6,7 @@ A colaborative shopping list (based on firebase)
 
 * A Firebase project (https://firebase.google.com/)
 
-* A coee push account (https://microsoft.github.io/code-push/)
+* A code push account (https://microsoft.github.io/code-push/)
 
 ## Files to change
 
